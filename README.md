@@ -1,4 +1,4 @@
-<h1 align="center"> AdRecreate: A simple, straightforward name that highlights the main functionality of your project - recreating advertisements. </h1> 
+<h1 align="center"> AdRecreate: A project - recreating advertisements. </h1> 
 <p align="center">
   <a href="#Introduction">Introduction</a> |
   <a href="#Usage">Usage</a> |
