@@ -177,24 +177,24 @@ def process_image():
     buffer.seek(0)
 
     # Encode image data to base64
-    # image_base64 = base64.b64encode(buffer.getvalue()).decode()
+    image_base64 = base64.b64encode(buffer.getvalue()).decode()
 
-    # # Return image and folder name as a JSON object
-    # return jsonify({
-    #     'image': image_base64,
-    #     'folder_name': folder_name,
-    # })
-    # Set the content type and encoding for the image
-    resp.headers.set('Content-Type', 'image/jpeg')
-    resp.headers.set('Content-Disposition', 'attachment', filename='image.jpg')
+    # Return image and folder name as a JSON object
+    return jsonify({
+        'image': image_base64,
+        'folder_name': folder_name,
+    })
+    # # Set the content type and encoding for the image
+    # resp.headers.set('Content-Type', 'image/jpeg')
+    # resp.headers.set('Content-Disposition', 'attachment', filename='image.jpg')
     
-    # Set the content type and encoding for the text
-    resp.headers.set('Content-Type', 'text/plain')
+    # # Set the content type and encoding for the text
+    # resp.headers.set('Content-Type', 'text/plain')
     
-    # Combine the image and text data into the response
-    resp.set_data(buffer.read() + b'\n\n' + folder_name.encode())
-    # Return image as a response
-    return resp
+    # # Combine the image and text data into the response
+    # resp.set_data(buffer.read() + b'\n\n' + folder_name.encode())
+    # # Return image as a response
+    # return resp
 
 
 @app.route('/fix-images', methods=['POST'])
@@ -234,7 +234,7 @@ def fix_images():
     text_removed_img.save(buffer, format='JPEG')
     buffer.seek(0)
 
-    return Response(buffer, mimetype='image/jpeg')
+    # return Response(buffer, mimetype='image/jpeg')
     image_encoded = base64.b64encode(buffer.getvalue()).decode()
     # Return image, fonts and font_sizes as a response
     return jsonify({
