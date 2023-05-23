@@ -3,6 +3,7 @@
   <a href="#Introduction">Introduction</a> |
   <a href="#Usage">Usage</a> |
 </p >
+
 ## Introduction
 
 Welcome to our project, aiming to redefine digital advertising using AI and Deep Learning. We focus on removing text from ads, detecting font styles, and recreating advertisements for enhanced visual impact and diversity.
