@@ -32,7 +32,6 @@ python -m pip install detectron2 -f https://dl.fbaipublicfiles.com/detectron2/wh
 pip install setuptools==59.5.0
 git clone https://github.com/ymy-k/DPText-DETR.git
 cd DPText-DETR
-clone this repository in DPText-DETR folder, and move all files outside ad_text_removal folder
 python setup.py build develop
 ```
 
